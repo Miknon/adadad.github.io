@@ -1,0 +1,91 @@
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:#f8003e;  /* respaldo para navegadores antiguos */
+    background: -webkit-linear-gradient(to right, #f1dcc2, #f8003e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,   #f1dcc2, #f8003e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    scrollbar-color: orange, red  ;
+}
+.logo{
+    text-align: center;
+    filter: drop-shadow(
+        0 0 10px rgb(0, 0, 0, 0.8)
+    )
+
+}
+h1 {
+    font-family: cursive;
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+.carrusel{
+    align-items: end;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+}
+.elemento img{
+   display: flex;
+   width: 200px;
+   height: 200px;
+}
+.elemento{
+flex: 1 0 auto;
+margin: 0 50px;
+background-color: red;
+width: 200px;
+height: 200px;
+scroll-snap-align: center;
+}
+/*Para telefonos chiquitos*/
+@media (min-height:360) and (max-width: 740px) {
+    body {
+        padding: 10px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo img{
+   display: flex;
+   margin: o;
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    p {
+        font-size: 20px;
+    }
+
+    .logo img{
+        display: flex;
+        margin: 0;
+         }
+}
+
+/* Estilos para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+    p {
+        font-size: 25px;
+    }
+}
+
+/* Estilos para escritorios */
+@media (min-width: 1025px) {
+
+.carrusel{
+    scrollbar-color: orange, red  ;
+}
+}
